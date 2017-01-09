@@ -96,7 +96,7 @@ func TestSysLoggerWithDebugAndTrace(t *testing.T) {
 // TestSysLoggerWithDebugAndTrace tests remote event logging
 func TestRemoteSysLoggerWithDebugAndTrace(t *testing.T) {
 	checkPrivledges(t)
-	logger := NewRemoteSysLogger("localhost", true, true)
+	logger := NewRemoteSysLogger("", true, true)
 	if !logger.debug {
 		t.Fatalf("Expected %t, received %t\n", true, logger.debug)
 	}
